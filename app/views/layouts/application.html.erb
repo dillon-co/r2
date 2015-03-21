@@ -17,13 +17,14 @@
     <%= render 'layouts/navbar' %>
 
   <div class="row">
-  <div class="small-6 large-2 columns">Column 1</div>
-  <div class="small-6 large-8 columns">Column 2</div>
-  <div class="small-12 large-2 columns">Column 3</div>
+    <div class"small-12 columns ">
+      <div class='panel' id= 'change-me'>
+      <%= yield %>
+    </div>
+    </div>
 </div>
 
 
-    <%= yield %>
   </div>
   </body>
 </html>
