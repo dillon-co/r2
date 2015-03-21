@@ -1,13 +1,10 @@
-<div class"center jumbotron">
+<div>
+<h1 style="color:white">Speak Robot Here!</h1>
 <%= form_for @translator do |f| %>
-  <%= f.label :original_text, "Translate To Robot Speak Here!" %>
   <%= f.text_field :original_text %>
-
   <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.submit "Let's Hear It!", class: "button tiny round" %>
-
-  <span><%= f.submit "Let's Hear It!", class: "button tiny round" %></span>
-  <span><%= link_to "See 'em all!", translations_path, class: "button tiny round" %> </span>
-
+  <span><%= f.submit "Let's Hear It!", class: "button small round" %></span>
+  <span><%= link_to "See 'em all!", translations_path, class: "button small round" %> </span>
 <% end %>
+
 </div>
