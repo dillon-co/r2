@@ -1,8 +1,9 @@
-<h1>Cool Robot Jazz</h1>
+<h1>Recent Robot Jazz</h1>
 
 <% @translators.each do |sound|  %>
 <hr>
   <h3>
-    <%= sound.original_text %> 
+    <%= sound.original_text %>
+    <%= link_to "Play it!", translation_path(sound), class: "button tiny round" %>
   </h3>
 <% end %>

@@ -5,6 +5,9 @@ class TranslationsController < ApplicationController
   end
 
   def show
+    @translator = Translation.find(params[:id])
+    @translator.translation(@translator.original_text)
+    redirect_to translations_path
   end
 
   def new
