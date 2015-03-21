@@ -4,6 +4,6 @@
 <hr>
   <h3>
     <%= sound.original_text %>
-    <span class="button tiny round"> Play that Shiz!</span> 
+    <%= link_to "Play it!", translation_path(sound), class: "button tiny round" %>
   </h3>
 <% end %>
