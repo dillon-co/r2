@@ -18,7 +18,7 @@ class TranslationsController < ApplicationController
     @translator = Translation.new(word_params)
     if @translator.save
       @translator.translation(@translator.original_text)
-      redirect_to @translator
+      redirect_to new_translation_path
     else
       render :new
     end
