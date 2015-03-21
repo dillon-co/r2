@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150321194739) do
     t.datetime "updated_at"
   end
 
-  add_index "translations", ["user_id"], name: "index_translations_on_user_id", using: :btree
+  add_index "translators", ["user_id"], name: "index_translators_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
