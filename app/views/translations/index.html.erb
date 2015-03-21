@@ -1,8 +1,9 @@
-<h1>Cool Robot Jazz</h1>
+<h1>Recent Robot Jazz</h1>
 
 <% @translators.each do |sound|  %>
 <hr>
   <h3>
-    <%= sound.original_text %> 
+    <%= sound.original_text %>
+    <span class="button tiny round"> Play that Shiz!</span> 
   </h3>
 <% end %>
