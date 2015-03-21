@@ -1,6 +1,7 @@
 class TranslationsController < ApplicationController
   
   def index
+    @translators = Translation.all
   end
 
   def show
