@@ -11,22 +11,24 @@
     <!-- Translations button -->
     <ul class="right">
         <li><%= link_to 'Translations' , users_index_path %></li>
-        <li><%= link_to 'Sign in' , new_user_session_path %></li>
-        <li><%= link_to 'Sign up' , new_user_registration_path %></li>
-      
+
+          <% if user_signed_in? %>
+
+          <% else %>
+            <li><%= link_to 'Sign in' , new_user_session_path %></li>
+            <li><%= link_to 'Sign up' , new_user_registration_path %></li>
+          <% end %>
 
         <% if user_signed_in? %>
-      <li class="has-dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            
-              <%= current_user.email %>
-            <% end %>
+          <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <%= current_user.email %>
+        <% end %>
              <span class="caret"></span></a>
         <ul class="dropdown">
             <% if user_signed_in? %>
-             <li><%= link_to 'Edit profile' , '#' %></li>
+              <li><%= link_to 'Edit profile' , edit_user_registration_path %></li>
               <li><%= link_to 'Log out' , destroy_user_session_path , method: :delete %></li>
-              <li><%= link_to 'Sing up' , new_user_registration_path %></li>
             <% end %>
         </ul>
       </li>
@@ -35,7 +37,7 @@
     <!-- Left Nav Section -->
     <ul class="left">
       <% if user_signed_in? %>
-        <%= link_to 'Profile' , users_profile_path %>
+        <li><%= link_to 'Profile' , users_profile_path , class:"active" %></li>
       <% end %>
     </ul>
   </section>
