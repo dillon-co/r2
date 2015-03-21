@@ -2,6 +2,7 @@
 <%= form_for @translator do |f| %>
   <%= f.label :original_text, "Translate To Robot Speak Here!" %>
   <%= f.text_field :original_text %>
-  <%= f.submit "Let's Hear It!", class: "button tiny round" %>
+  <span><%= f.submit "Let's Hear It!", class: "button tiny round" %></span>
+  <span><%= link_to "See 'em all!", translations_path, class: "button tiny round" %> </span>
 <% end %>
 </div>

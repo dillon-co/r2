@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "translations#index"
+  root to: "translations#new"
 
   get 'users/show'
 
