@@ -11,7 +11,7 @@ class Translator < ActiveRecord::Base
   
   
   def translated_audio(input)
-    input.split('').each do {|x| @t_key[x].play}
+    input.split('').each { |x| @t_key[x].play }
   end
 
   
@@ -21,6 +21,7 @@ class Translator < ActiveRecord::Base
   end   
 
   def translation
+    translator_key
     translated_audio(original_text)
   end  
 end
