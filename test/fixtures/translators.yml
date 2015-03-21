@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  original_text: MyText
+  audio: MyString
+  translator_key: MyText
+
+two:
+  user_id: 
+  original_text: MyText
+  audio: MyString
+  translator_key: MyText
