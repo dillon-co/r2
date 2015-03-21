@@ -1,7 +1,8 @@
 <div class"center jumbotron">
 <%= form_for @translator do |f| %>
   <%= f.label :original_text, "Translate To Robot Speak Here!" %>
-  <%= f.text_area :original_text %>
+  <%= f.text_field :original_text %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
   <%= f.submit "Let's Hear It!", class: "button tiny round" %>
 <% end %>
 </div>
