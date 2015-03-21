@@ -4,7 +4,7 @@ class Translator < ActiveRecord::Base
   
   def translator_key
     @t_key = Hash.new
-    ('a'..'z').each do |k|
+    ('0'..'z').each do |k|
       @t_key[k] = MusicTheory::Note.new(frequency: "#{k}".ord * 5, duration: 0.1, distortion: true)
     end   
   end
@@ -14,14 +14,14 @@ class Translator < ActiveRecord::Base
     input.split('').each { |x| @t_key[x].play }
   end
 
-  
-  def original_text
-    stuff = gets.chomp
-    stuff
-  end   
-
   def translation
     translator_key
-    translated_audio(original_text)
+    translated_audio(original_text2)
   end  
+
+  private 
+
+  def word_params
+    params.require(:translators).permit(:original_text)
+
 end
