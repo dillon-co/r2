@@ -5,7 +5,7 @@ class Translator < ActiveRecord::Base
   def translator_key
     @t_key = Hash.new
     ('a'..'z').each do |k|
-      t_key[k] = MusicTheory::Note.new(frequency: "#{k}".ord * 5, duration: 0.1, distortion: true)
+      @t_key[k] = MusicTheory::Note.new(frequency: "#{k}".ord * 5, duration: 0.1, distortion: true)
     end   
   end
   
@@ -15,11 +15,12 @@ class Translator < ActiveRecord::Base
   end
 
   
-  def origional_text
-    
+  def original_text
+    stuff = gets.chomp
+    stuff
   end   
 
   def translation
-    translated_audio(origional_text)
+    translated_audio(original_text)
   end  
 end
