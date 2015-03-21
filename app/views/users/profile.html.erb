@@ -1,6 +1,12 @@
 <h1>Profile</h1>
 <p><%= @user.email %></p>
 
+<h3>My robot talks</h3>
+
+<% @user.translations.each do |sound| %>
+<%= sound.original_text %>
+  <%= link_to "Play it!", translation_path(sound), class: "button tiny round" %>
+<% end %>
 
 
 

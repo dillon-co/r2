@@ -1,5 +1,5 @@
 class TranslationsController < ApplicationController
-  
+  before_action :authenticate_user!, except: [:index, :show] 
   def index
     @translators = Translation.all
   end
@@ -18,7 +18,7 @@ class TranslationsController < ApplicationController
     @translator = Translation.new(word_params)
     if @translator.save
       @translator.translation(@translator.original_text)
-      redirect_to @translator
+      redirect_to new_translation_path
     else
       render :new
     end
@@ -29,7 +29,7 @@ class TranslationsController < ApplicationController
 
   private
   def word_params
-    params.require(:translation).permit(:original_text)
+    params.require(:translation).permit(:original_text, :user_id)
   end  
 
 end

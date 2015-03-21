@@ -22,7 +22,7 @@ class Translator < ActiveRecord::Base
   private 
 
   def word_params
-    params.require(:translators).permit(:original_text)
+    params.require(:translators).permit(:original_text, :user_id)
   end  
 
 end
