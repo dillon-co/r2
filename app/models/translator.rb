@@ -3,6 +3,10 @@ class Translator < ActiveRecord::Base
 
   
   def translator_key
+    t_key = Hash.new
+    (a..z).each do |k|
+      t_key[k] = [MusicThoery::Note.new(frequency: "#{k}".ord * 5]
+    end   
   end
   
   
