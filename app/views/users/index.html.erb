@@ -2,5 +2,6 @@
 <h1>All Users</h1>
 <p><% @users.each do |user| -%>
 <%= user.email %>
+<%= link_to "profile", users_show_path %>
 <% end %>
  
