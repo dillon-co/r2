@@ -16,6 +16,9 @@ gem 'music_theory'
 
 gem 'foundation-rails', '5.4.5'
 
+gem 'better_errors'
+gem 'binding_of_caller'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 

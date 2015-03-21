@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   get 'users/show'
 
   get 'users/index'
@@ -6,9 +7,13 @@ Rails.application.routes.draw do
   get 'users/profile'
 
   resources :translations
+=======
+>>>>>>> added translation
   
+  resources :translations
+
   devise_for :users
   
-  root to: "home#index"
+  root to: "translations#index"
 
 end

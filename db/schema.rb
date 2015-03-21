@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150321162537) do
+=======
+ActiveRecord::Schema.define(version: 20150321194739) do
+>>>>>>> added translation
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "translations", force: true do |t|
+    t.integer  "user_id"
+    t.text     "original_text"
+    t.string   "audio"
+    t.text     "translator_key"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "translators", force: true do |t|
     t.integer  "user_id"

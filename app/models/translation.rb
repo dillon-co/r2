@@ -1,4 +1,5 @@
-class Translator < ActiveRecord::Base
+class Translation < ActiveRecord::Base
+
   belongs_to :user
 
   
@@ -14,9 +15,9 @@ class Translator < ActiveRecord::Base
     input.split('').each { |x| @t_key[x].play }
   end
 
-  def translation
+  def translation(x)
     translator_key
-    translated_audio(original_text2)
+    translated_audio(x)
   end  
 
   private 

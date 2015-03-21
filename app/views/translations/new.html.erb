@@ -1,2 +1,7 @@
-<h1>Translate Here</h1>
-<p>Find me in app/views/translations/new.html.erb</p>
+<div class="center jumbotron">
+<%= form_for @translator do |f| %>
+  <%= f.label :original_text, "Translate To Robot Speak Here!" %>
+  <%= f.text_area :original_text %>
+  <%= f.submit %>
+<% end %>
+</div>

@@ -1,2 +1,8 @@
-<h1>Translations#index</h1>
-<p>Find me in app/views/translations/index.html.erb</p>
+<h1>Cool Robot Jazz</h1>
+<%= link_to "Click here to jazz your pants off" new_translation_path class: "btn btn-info" %>
+<% @translator.each do |sound|  %>
+<hr>
+  <h3>
+    <%= sound.original_text %> 
+  </h3>
+<% end %>
