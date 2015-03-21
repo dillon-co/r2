@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources: translations
+  resources :translations
   
   devise_for :users
   

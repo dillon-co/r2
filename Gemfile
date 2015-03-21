@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'music_theory'
 
-gem 'foundation'
+gem 'foundation-rails', '5.4.5'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
