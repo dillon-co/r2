@@ -2,7 +2,7 @@
 
 <% @translators.each do |sound|  %>
 <hr>
-  <h3>
+  <h3 class='white'>
     <%= sound.original_text %>
     <%= link_to "Play it!", translation_path(sound), class: "button tiny round" %>
   </h3>
